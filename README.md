@@ -6,6 +6,7 @@ A full stack Timestamp Microservice api project to get unix and UTC timestamp fr
 # Technologies
 Project is created with :
 - Express: 4.16.4
+- Node: 4.4.5
 
 
 # Install
