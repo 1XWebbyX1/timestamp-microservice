@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const PORT = process.env.PORT || 3000;
 
 //mount static files
 app.use(express.static(__dirname + '/src'));
@@ -28,6 +29,6 @@ app.get("/api/timestamp/:date_string?", middleware ,function (req, res) {
 
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+var listener = app.listen(PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });

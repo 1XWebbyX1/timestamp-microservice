@@ -1,19 +1,58 @@
 
-# API Project: Timestamp Microservice for FCC
+# Timestamp Microservice
+A full stack Timestamp Microservice api project to get unix and UTC timestamp from a date string.
 
-### User stories :
 
-1. The API endpoint is `GET [project_url]/api/timestamp/:date_string?`
-2. A date string is valid if can be successfully parsed by `new Date(date_string)` (JS) . Note that the unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**. In our test we will use date strings compliant with ISO-8601 (e.g. `"2016-11-20"`) because this will ensure an UTC timestamp.
-3. If the date string is **empty** it should be equivalent to trigger `new Date()`, i.e. the service uses the current timestamp.
-4. If the date string is **valid** the api returns a JSON having the structure 
-`{"unix": <date.getTime()>, "utc" : <date.toUTCString()> }`
-e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
-5. If the date string is **invalid** the api returns a JSON having the structure `{"unix": null, "utc" : "Invalid Date" }`. It is what you get from the date manipulation functions used above.
+# Technologies
+Project is created with :
+- Express: 4.16.4
 
-#### Example usage:
-* https://curse-arrow.hyperdev.space/api/timestamp/2015-12-15
-* https://curse-arrow.hyperdev.space/api/timestamp/1450137600000
 
-#### Example output:
-* { "unix": 1450137600, "natural": "December 15, 2015" }
+# Install
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/1XWebbyX1/timestamp-microservice
+
+# Go into the repository
+$ cd timestamp-microservice
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+You will then be able to access it at localhost:3000
+
+
+Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+# How to Use
+
+Example Usage:
+GET [project url]/api/timestamp/2015-12-25
+GET project url]/api/timestamp/1450137600
+
+Example Output:
+{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+
+# You may also like
+- [Pomodoro Clock](https://github.com/1XWebbyX1/pomodoro-clock-pwa)
+- [Drum Machine](https://github.com/1XWebbyX1/electric-drums-pwa)
+
+# Inspiration
+
+This Project was inspired by user stories  at [freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice).
+
+
+# License
+
+MIT
+
+---
+
+
+> GitHub [@1XWebbyX1](https://github.com/1XWebbyX1)
