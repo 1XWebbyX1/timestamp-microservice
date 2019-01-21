@@ -27,6 +27,13 @@ app.get("/api/timestamp/:date_string?", middleware ,function (req, res) {
   res.json({"unix": req.time, "utc": req.utc});
 });
 
+// 404 Not Found Middleware
+app.use(function(req, res, next) {
+  res.status(404)
+    .type('text')
+    .send('Not Found');
+})
+
 
 // listen for requests :)
 var listener = app.listen(PORT, function () {
